@@ -1,0 +1,19 @@
+[project]
+name = "perf-test"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "torch==2.9.0",
+    "numpy"
+]
+
+
+[tool.uv.sources]
+torch = [  
+    { index = "pytorch-cu130" },  
+]
+[[tool.uv.index]]  
+name = "pytorch-cu130"  
+url = "https://download.pytorch.org/whl/cu130"  
+explicit = true
